@@ -4,11 +4,14 @@ const app = express();
 const port = 3000;
 const myBudgetData = require('./data.json');
 const mongoose = require("mongoose");
+const bodyParser = require('body-parser');
 const budgetModel = require("./models/budget_schema");
 
 let url = 'mongodb://localhost:27017/budget';
 
 app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
@@ -35,22 +38,17 @@ app.get('/api/budget', (req, resp) => {
 });
 
 app.post('/api/budget', (req, resp) => {
-  // console.log(myBudgetData.myBudget);
+  // console.log(req.body);
 
-  // let newData = new budgetModel(myBudgetData);
-  let newData = new budgetModel({
-      "title": "Concerts",
-      "budget": 90,
-      "color": "#ffcd56"
-    });
+  let newData = new budgetModel(req.body);
   mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       console.log('connected to the database to post to /api/budget');
-      console.log(newData);
+      // console.log(newData);
       budgetModel.insertMany(newData)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           mongoose.connection.close();
           resp.send(res);
         })
