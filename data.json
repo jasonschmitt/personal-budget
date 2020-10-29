@@ -2,33 +2,43 @@
   "myBudget": [
   {
     "title": "Eat out",
-    "budget": 30
+    "budget": 30,
+    "color": "#ffcd56"
   }, {
     "title": "Rent",
-    "budget": 350
+    "budget": 350,
+    "color": "#ff6384"
   }, {
     "title": "Groceries",
-    "budget": 90
+    "budget": 90,
+    "color": "#36a2eb"
   }, {
     "title": "Parties",
-    "budget": 40
+    "budget": 40,
+    "color": "#fd6b19"
   }, {
     "title": "Automobile",
-    "budget": 70
+    "budget": 70,
+    "color": "#eb4034"
   }, {
     "title": "Family outings",
-    "budget": 100
+    "budget": 100,
+    "color": "#34e2eb"
   }, {
     "title": "Clothing",
-    "budget": 30
+    "budget": 30,
+    "color": "#5c2ad1"
   }, {
     "title": "Video games",
-    "budget": 35
+    "budget": 35,
+    "color": "#d12ab2"
   }, {
     "title": "Sport events",
-    "budget": 50
+    "budget": 50,
+    "color": "#2a86d1"
   }, {
     "title": "Concerts",
-    "budget": 90
+    "budget": 90,
+    "color": "#ffcd56"
   }
 ]}
